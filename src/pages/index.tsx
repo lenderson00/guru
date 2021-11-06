@@ -5,7 +5,7 @@ const Login = () => {
 
   return (
     <header>
-      <ColorToogleButton />
+     Hellow
     </header>
   )
 }
