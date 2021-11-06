@@ -1,7 +1,4 @@
-import ColorToogleButton from "@app/components/ColorToogleButton"
-
-
-const Login = () => {
+const Home = () => {
 
   return (
     <header>
@@ -10,4 +7,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Home

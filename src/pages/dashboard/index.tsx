@@ -1,10 +1,13 @@
+import { Sidebar } from "@app/components/Menu/SideBar"
 
-const Dashboard = () => {
+const Home = () => {
+
   return (
-   <>
-    dashboard
-   </>
+      <Sidebar>
+        Hellow
+      </Sidebar>
+     
   )
 }
 
-export default Dashboard
+export default Home

@@ -6,7 +6,7 @@ const ColorToogleButton = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <header>
-      <Button w={'3rem'} h={'3rem'} borderRadius={'50%'} onClick={toggleColorMode} position={"absolute"} right={'3rem'} top={'1.5rem'}>
+      <Button w={'3rem'} h={'3rem'} borderRadius={'50%'} onClick={toggleColorMode} position={"absolute"} right={'3rem'} top={'1rem'}>
         {colorMode === "light" ? "🌙" : "☀️"}
       </Button>
     </header>
