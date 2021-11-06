@@ -4,12 +4,28 @@ import { ChakraProvider } from "@chakra-ui/react"
 import theme from '../style/theme'
 import React from 'react'
 import ColorToogleButton from '@app/components/ColorToogleButton'
+import { AuthContext } from '@app/components/AuthContext'
+import { Toaster } from 'react-hot-toast'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <ColorToogleButton />
-      <Component {...pageProps} />
+      <Toaster  
+        position="bottom-center" 
+        reverseOrder={false}
+        toastOptions={{
+          error: {
+            duration: 3000,
+          },
+          success: {
+            duration: 3000,
+          },
+        }}
+        />
+      <AuthContext>
+        <Component {...pageProps} />
+      </AuthContext>
     </ChakraProvider>
   )
 }

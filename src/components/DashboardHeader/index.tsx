@@ -9,7 +9,7 @@ export const DashboardHeader: React.FC<Props> = ({ children }: Props) => {
   return (
       <Box>
         <Flex direction={'row'} h={'3rem'} alignItems={'center'} padding={'1rem'}> 
-      
+          
         </Flex>
         {children}
       </Box>

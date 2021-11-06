@@ -4,6 +4,7 @@ import {
   Flex,
   useColorModeValue,
   Text,
+  Button,
   BoxProps,
 } from '@chakra-ui/react';
 
@@ -22,6 +23,12 @@ import {
 import { MenuItem } from '@app/domain/models/MenuItem';
 import { NavItem } from '@app/components/Menu/NavItem'
 import Logo from '@app/components/Logo'
+import { signOut } from "firebase/auth";
+import { auth } from '@app/firebase'
+
+import toast from 'react-hot-toast'
+import { useRouter } from 'next/router'
+
 
 interface SidebarProps extends BoxProps {
   onClose: () => void;
@@ -39,6 +46,19 @@ const LinkItems: Array<MenuItem> = [
 ];
 
 export const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+  const router = useRouter()
+  const logout = async () => {
+
+    try {
+      await signOut(auth)
+      toast.success('Sign out Successfully')
+      router.push('/login')
+    }catch (e) {
+      toast.error('An error occurred')
+    }
+    
+  }
+
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}
@@ -62,7 +82,7 @@ export const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             ))}
           </Box>
         
-          <NavItem icon={FiLogOut} bottom={0}>
+          <NavItem icon={FiLogOut} bottom={0} onClick={logout} >
               LogOut
           </NavItem>
       </Flex>
