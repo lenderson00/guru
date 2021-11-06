@@ -10,9 +10,7 @@ import {
   Input,
   Link,
   Stack,
-  Image,
   SimpleGrid,
-  Box,
   Text
 } from '@chakra-ui/react';
 import { FaFacebook, FaGoogle } from 'react-icons/fa'
@@ -70,7 +68,7 @@ export default function SplitScreen() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex flex={1} display={{md: 'none',  lg: 'flex'}} backgroundColor={'#8D37FF'}>
+      <Flex flex={1} display={{base: 'none', md:'none',  lg: 'flex'}} backgroundColor={'#8D37FF'}>
        
       </Flex>
     </Stack>
