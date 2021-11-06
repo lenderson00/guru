@@ -1,13 +1,16 @@
 import { Sidebar } from "@app/components/Menu/SideBar"
-
-const Home = () => {
+import {
+  DashboardHeader
+} from '@app/components/DashboardHeader'
+const Dashboard = () => {
 
   return (
       <Sidebar>
-        Hellow
+        <DashboardHeader>
+          Initail Dashdoard
+         </DashboardHeader>
       </Sidebar>
-     
   )
 }
 
-export default Home
+export default Dashboard

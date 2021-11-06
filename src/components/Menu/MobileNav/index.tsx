@@ -2,7 +2,7 @@ import {
   IconButton,
   Flex,
   useColorModeValue,
-  Text,
+  Box,
   FlexProps,
 } from '@chakra-ui/react';
 
@@ -10,6 +10,7 @@ import {
   FiMenu,
 } from 'react-icons/fi';
 
+import Logo from '@app/components/Logo'
 interface MobileProps extends FlexProps {
   onOpen: () => void;
 }
@@ -31,10 +32,10 @@ export const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         aria-label="open menu"
         icon={<FiMenu />}
       />
-
-      <Text fontSize="2xl" ml="8" fontFamily="monospace" fontWeight="bold">
-        Logo
-      </Text>
+      <Box p={10}>
+       <Logo />
+      </Box>
+    
     </Flex>
   );
 };

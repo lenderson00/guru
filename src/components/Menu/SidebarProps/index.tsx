@@ -21,6 +21,7 @@ import {
 
 import { MenuItem } from '@app/domain/models/MenuItem';
 import { NavItem } from '@app/components/Menu/NavItem'
+import Logo from '@app/components/Logo'
 
 interface SidebarProps extends BoxProps {
   onClose: () => void;
@@ -48,9 +49,7 @@ export const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="40" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          Logo
-        </Text>
+        <Logo />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       <Flex direction={'column'} h={'80%'} justify={'space-between'}>
